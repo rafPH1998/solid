@@ -1,5 +1,6 @@
 <?php
 
+
 /* Imagine que temos um sistema de pagamentos onde temos uma classe base MetodoPagamento. 
 No entanto, ao introduzir PagamentoPix, acabamos violando o LSP. */
 

@@ -13,32 +13,23 @@ interface RegraDeCalculo {
 // Implementação para Desenvolvedor
 class Desenvolvedor implements RegraDeCalculo {
     public function calcular(float $salarioBase): float {
-        return $salarioBase * 1.2; // 20% a mais
+        return $salarioBase * 1.2; 
     }
 }
 
 // Implementação para Gerente
 class Gerente implements RegraDeCalculo {
     public function calcular(float $salarioBase): float {
-        return $salarioBase * 1.5; // 50% a mais
+        return $salarioBase * 1.5;
     }
 }
 
-// Classe que usa a abstração para calcular o salário
-class CalculadoraSalario {
-    public function calcularSalario(RegraDeCalculo $cargo, float $salarioBase): float {
-        return $cargo->calcular($salarioBase);
-    }
-}
-
-
-$calculadora = new CalculadoraSalario();
 
 $desenvolvedor = new Desenvolvedor();
-echo "Salário do desenvolvedor: R$ " . $calculadora->calcularSalario($desenvolvedor, 5000) . "\n";
+echo "Salário do desenvolvedor: R$ " . $desenvolvedor->calcular(5000) . "\n";
 
 $gerente = new Gerente();
-echo "Salário do gerente: R$ " . $calculadora->calcularSalario($gerente, 7000) . "\n";
+echo "Salário do gerente: R$ " . $gerente->calcular(7000) . "\n";
 
 /* Vantagens:
 ✅ Aberto para extensão: Podemos adicionar novos cargos apenas criando novas classes que implementem RegraDeCalculo.
@@ -47,10 +38,9 @@ echo "Salário do gerente: R$ " . $calculadora->calcularSalario($gerente, 7000) 
 
 class Analista implements RegraDeCalculo {
     public function calcular(float $salarioBase): float {
-        return $salarioBase * 1.3; // 30% a mais
+        return $salarioBase * 1.3;
     }
 }
 
-// Uso:
 $analista = new Analista();
-echo "Salário do analista: R$ " . $calculadora->calcularSalario($analista, 6000) . "\n";
+echo "Salário do analista: R$ " . $analista->calcular(6000) . "\n";

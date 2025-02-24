@@ -1,8 +1,0 @@
-Introdução ao SOLID
-O SOLID é um conjunto de cinco princípios da programação orientada a objetos que visam tornar o código mais compreensível, flexível e fácil de manter. O acrônimo SOLID representa:
-
-Single Responsibility Principle (Princípio da Responsabilidade Única)
-Open/Closed Principle (Princípio do Aberto/Fechado)
-Liskov Substitution Principle (Princípio da Substituição de Liskov)
-Interface Segregation Principle (Princípio da Segregação de Interface)
-Dependency Inversion Principle (Princípio da Inversão de Dependência)
